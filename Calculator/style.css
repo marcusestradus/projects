@@ -1,0 +1,69 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: 'Varela Round', sans-serif;
+    font-weight: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.calculator-grid {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(8, 75px);
+    background-color: white;
+}
+
+.calculator-grid button {
+    cursor: pointer;
+    font-size: 2rem;
+    border: none;
+    height: 74px;
+    margin: 0.5px;
+}
+
+.calculator-grid button:hover {
+    background-color: #DCDCDC;
+}
+
+.span-two {
+    grid-column:  span 2;
+}
+
+.output {
+    grid-column: 1 / -1;
+    grid-row: span 2;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+    height: 150px;
+    margin: 1px;
+}
+
+.output #prev-operand {
+    color: rgba(255,255, 255, 0.75);
+    font-size: 1.5rem;
+}
+
+.output #curr-operand {
+    color: white;
+    font-size: 2.5rem;
+}
+
+.nonNum {
+    background-color: #a9a9a9;
+}
+
+#eq {
+    background-color: #A569BD;
+}
